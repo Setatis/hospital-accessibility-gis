@@ -1,0 +1,20 @@
+# 数据目录（大文件，不入库）
+data/
+
+# 输出结果
+output/
+
+# Python 缓存
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# 编辑器 / IDE
+.idea/
+.vscode/
+*.swp
+.DS_Store
+.trae/
