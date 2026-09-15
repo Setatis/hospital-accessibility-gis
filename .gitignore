@@ -1,9 +1,6 @@
 # 数据目录（大文件，不入库）
 data/
 
-# 输出结果
-output/
-
 # Python 缓存
 __pycache__/
 *.py[cod]
