@@ -8,7 +8,7 @@
    - 从 OpenStreetMap (Overpass API) 获取上海市行政区边界与医院 POI，自动重投影、清洗、空间连接
    - 网络不可用 / 下载失败时**自动回退到内置演示数据**，保证流程离线可运行
 
-2. **空间分析（双方案 × 双出行方式）**
+2. **空间分析**
    - 直线缓冲区（驾车 40km/h → 10min≈6.7km；步行 4.8km/h → 10min≈0.8km）
    - 路网网络等时圈（基于真实/演示路网的最短路径可达性，更符合实际交通）
 
@@ -70,13 +70,6 @@ python main.py --use-demo
 | 统计表 | `output/stats/coverage_raster_stats.csv` | 栅格交叉验证统计 |
 | 地理数据 | `output/stats/districts_coverage.geojson` | 带覆盖率属性的行政区 |
 | 静态地图 | `output/maps/*.png` | 医院分布+覆盖图、覆盖率专题图 |
-
-## 数据来源与说明
-
-- **行政区边界 / 医院 POI**：OpenStreetMap（Overpass API，公开免费，无 Key）。OSM 在国内医院 POI 覆盖可能不完整，属正常现象。
-- **演示数据**：由 `generate_demo_data.py` 合成（16 区 + 39 家医院 + 简化路网），用于离线验证流程。
-- **坐标系**：分析使用 EPSG:32651（UTM 51N）保证面积精度；展示输出 WGS84（EPSG:4326）。
-- 当前示例输出基于演示数据；在可访问 OSM 的网络环境运行 `python main.py` 可获得真实数据结果。
 
 ## 技术说明
 

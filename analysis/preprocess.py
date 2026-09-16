@@ -1,10 +1,3 @@
-"""数据预处理：清洗、坐标投影、行政区与医院的空间连接。
-
-将原始 WGS84 数据清洗后：
-- 行政区：valid geometry、统一至投影坐标系（用于面积精确计算）
-- 医院：剔除空几何/空名称、标注所属行政区（空间连接）
-输出到 data/intermediate/ 供后续分析复用。
-"""
 from __future__ import annotations
 
 import numpy as np

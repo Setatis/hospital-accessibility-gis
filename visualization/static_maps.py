@@ -1,11 +1,3 @@
-"""静态地图可视化（matplotlib）。
-
-生成两类高质量静态图：
-1. hospital_map: 医院分布 + 双方案 10 分钟覆盖范围叠加（驾车/步行分图）
-2. choropleth_map: 行政区医院覆盖率专题图（按覆盖率分级着色）
-
-需传入覆盖结果与统计表；几何统一用黄浦区为中心的投影方便展示。
-"""
 from __future__ import annotations
 
 import matplotlib

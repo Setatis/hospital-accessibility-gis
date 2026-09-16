@@ -1,16 +1,3 @@
-"""路网网络分析（等时圈）。
-
-通过真实道路网络计算各医院在设定时间（10 分钟）内可达的覆盖范围，
-相比直线缓冲区更符合实际交通可达性。
-
-两种建图方式：
-1. build_graph_from_roads(roads_gdf) —— 从任意道路线要素构建平面路网图（离线可用，
-   适用于演示路网或用户提供的路网数据）。
-2. build_graph_osmnx(area_polygon, mode) —— 通过 osmnx 下载 OSM 真实路网构建（联网）。
-
-等时圈：在网络图上以医院最近节点为源，用 Dijkstra 按边权重（UTM 米）计算 cutoff 内
-可达的边，合并其线几何后做缓冲得到网络形状的覆盖多边形。
-"""
 from __future__ import annotations
 
 import logging

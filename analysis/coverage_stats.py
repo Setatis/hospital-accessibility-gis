@@ -1,12 +1,3 @@
-"""行政区覆盖率统计。
-
-对每种方案(method) × 出行方式(mode) 的覆盖结果，统计每个行政区：
-- 总面积（行政区几何面积，UTM 米² / 换算 km²）
-- 覆盖面积（区内所有医院覆盖范围的并集与实际行政区相交）
-- 覆盖率（覆盖面积/总面积）
-
-输出 CSV（供阅读）与 GeoJSON（带属性的行政区，供专题图）。
-"""
 from __future__ import annotations
 
 import geopandas as gpd

@@ -1,11 +1,3 @@
-"""从本地 Geofabrik OSM pbf 提取上海路网，供真实路网分析。
-
-背景：Overpass 公共接口对大查询极不稳定（SSL/超时/空返回），而 Geofabrik
-提供按区域打包好的 .osm.pbf 文件下载（HTTP 静态文件，稳定可靠）。本项目
-下载中国最新 pbf 到本地，再按上海外包框提取路网并缓存为 GPKG 复用。
-
-模块依赖：pyogrio（带 GDAL 的 OSM 驱动），可直接读 pbf，无需额外编译。
-"""
 from __future__ import annotations
 
 import logging

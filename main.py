@@ -1,17 +1,3 @@
-"""上海医院 10 分钟可达覆盖 GIS 分析 —— 主入口。
-
-编排流程：数据准备 → 预处理 → 双方案空间分析 → 统计 → 栅格分析 → 可视化。
-
-运行方式：
-    python main.py [--use-demo]
-
-参数：
-    --use-demo   强制使用离线演示数据（不尝试 OSM 下载），适合无网络环境。
-
-数据策略：
-    默认先尝试从 Overpass 下载真实 OSM 数据；任一下载失败即回退到演示数据，
-    确保流程始终可运行。
-"""
 from __future__ import annotations
 
 import argparse
@@ -21,7 +7,6 @@ from pathlib import Path
 
 import geopandas as gpd
 
-# 确保项目模块可导入
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import config
@@ -152,7 +137,7 @@ def main(force_demo: bool = False) -> int:
     # ---- 结果汇总 ----
     sep = "-" * 60
     print("\n" + sep)
-    print("✅ 分析完成。数据源:", data_source)
+    print("分析完成。数据源:", data_source)
     print(sep)
     print("【统计表】")
     print("  CSV      :", exports["csv"])

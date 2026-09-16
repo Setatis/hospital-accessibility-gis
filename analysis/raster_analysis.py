@@ -1,13 +1,3 @@
-"""栅格分析：用 rasterio 将覆盖多边形栅格化，并做分区（zonal）统计。
-
-用途：
-- 将矢量覆盖范围转为规则栅格（默认 500m），演示栅格数据分析能力。
-- 对各行政区统计栅格覆盖面积/占比，作为对矢量统计结果的交叉验证。
-
-输出：
-- 每（method, mode）一张 coverage 栅格 .tif
-- 一个栅格覆盖率统计表 DataFrame / CSV
-"""
 from __future__ import annotations
 
 import numpy as np
